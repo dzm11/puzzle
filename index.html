@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI — Puzzle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <section class="hero">
+                <nav>
+                    <div class="logo"><img src="./app/img/Logo.svg" alt=""></div>
+                    <ul>
+                        <li><a href="">How it will work</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href=""><button class="disabled"><img src="./app/img/Wand.svg" alt="">Design your
+                                    Puzzle</button></a></li>
+                    </ul>
+                </nav>
+                <div class="waitlist-form">
+                    <h1>Join for the <span class="text-gradient"> Puzzle Generator</span> waitlist</h1>
+                    <form action="" method="post">
+                        <!-- <label for="email">Write your e-mail...</label> -->
+                        <input type="email" name="email" required placeholder="Write your e-mail...">
+                        <button type="submit"><img src="./app/img/Plane.svg" alt="">Join waitlist</button>
+                    </form>
+                </div>
+            </section>
+            <main>
+                <section class="how-it-works">
+                    <div class="how-it-works__header">
+                        <h2>How it<span class="text-gradient"> Works</span></h2>
+                    </div>
+                    <div class="how-it-works__content">
+                        <div class="how-it-works__content--step">
+                            <img src="./app/img/step-1.png" alt="">
+                            <div class="step__content">
+                                <div class="step__content--header">
+                                    <div class="tag">Step 1</div>
+                                    <h3>Write <span class="text-gradient">Prompt</span></h3>
+                                </div>
+                                <div class="step__content--description">
+                                    <p>Dive into a world of endless possibilities as you craft personalized puzzles from
+                                        your favorite images. With our intuitive platform, you're in control of every
+                                        piece of the puzzle-making process.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-it-works__content--step">
+                            <div class="step__content">
+                                <div class="step__content--header">
+                                    <div class="tag">Step 2</div>
+                                    <h3>Pick <span class="text-gradient">Elements Amount</span></h3>
+                                </div>
+                                <div class="step__content--description">
+                                    <p>Dive into a world of endless possibilities as you craft personalized puzzles from
+                                        your favorite images. With our intuitive platform, you're in control of every
+                                        piece of the puzzle-making process.</p>
+                                </div>
+                            </div>
+                            <img src="./app/img/step-2.png" alt="">
+                        </div>
+                        <div class="how-it-works__content--step"><img src="./app/img/step-3.png" alt="">
+                            <div class="step__content">
+                                <div class="step__content--header">
+                                    <div class="tag">Step 3</div>
+                                    <h3>Receive <span class="text-gradient">Puzzle & Enjoy</span></h3>
+                                </div>
+                                <div class="step__content--description">
+                                    <p>Dive into a world of endless possibilities as you craft personalized puzzles from
+                                        your favorite images. With our intuitive platform, you're in control of every
+                                        piece of the puzzle-making process.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="faq">
+                    <h2>F.A.Q.</h2>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is
+                                    the moon sometimes out during the day?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                    ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is
+                                    the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                    ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we
+                                    ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                    ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much
+                                    does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                    ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do
+                                    airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis
+                                    ut. Ut tortor pretium viverra suspendisse potenti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <img src="" alt="">
+                <div class="divider"></div>
+                <div class="version">
+                    <div class="header">Version </div>
+                    <div class="content">2023 © AI — Puzzle by Stable Diffusion AI</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+</body>
+
+</html>

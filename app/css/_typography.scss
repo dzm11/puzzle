@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'ClashDisplay-Semibold';
+    src: url('./app/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+    url('./app/fonts/ClashDisplay-Semibold.woff') format('woff');
+         font-weight: 600;
+         font-display: swap;
+         font-style: normal;
+  }
+  
+
+  :root {
+    --ff-secondary: 'Bricolage Grotesque', sans-serif;
+    --ff-primary: 'ClashDisplay-Semibold', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:var(--ff-primary);
+}
+
+h1{
+    color: var(--100);
+text-align: center;
+font-feature-settings: 'salt' on;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 64px */
+}
+
+h2{
+    color: #CED4D4;
+font-feature-settings: 'salt' on;
+font-size: 56px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 56px */
+}
+
+h3{
+    color: #CED4D4;
+font-feature-settings: 'salt' on;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 40px */
+}
