@@ -24,6 +24,25 @@ font-size: 64px;
 font-style: normal;
 font-weight: 600;
 line-height: 100%; /* 64px */
+@media (max-width: 45rem) {
+
+    /* 720px */
+    & {
+        font-size: 50px;
+    }
+}
+@media (max-width: 32.5rem) {
+    & {
+        font-size: 38px;
+    }
+}
+@media (max-width: 25rem) {
+
+    /* 720px */
+    & {
+        font-size: 32px;
+    }
+}
 }
 
 h2{

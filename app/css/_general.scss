@@ -23,12 +23,6 @@ html.lenis body {
 //
 
 body {
-    //do zmiany//////////////
-    $text: #7288a2;
-    $gray: #4d5974;
-    $lightgray: #e5e5e5;
-    $blue: #03b5d2;
-    /////////////////////////
     font-family: var(--ff-secondary);
     color: var(--82);
     background-color: var(--bg);
@@ -47,19 +41,35 @@ body {
                 flex-direction: column;
                 align-items: center;
                 gap: 27rem;
+                padding: 1.25rem 1.75rem;
 
                 nav {
-                    padding: 1.25rem 1.75rem;
                     max-width: 1552px;
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
 
+                    @media (max-width: 50rem) {
+
+                        /* 800px */
+                        & {
+                            justify-content: flex-start;
+                        }
+                    }
+
                     .logo {
                         img {
                             height: 34px;
                             width: 100%;
+
+                            @media (max-width: 50rem) {
+
+                                /* 800px */
+                                & {
+                                    height: 20px;
+                                }
+                            }
                         }
                     }
 
@@ -67,6 +77,14 @@ body {
                         display: flex;
                         gap: 2rem;
                         align-items: center;
+
+                        @media (max-width: 50rem) {
+
+                            /* 800px */
+                            & {
+                                display: none;
+                            }
+                        }
 
                         li {
                             button.disabled {
@@ -89,16 +107,49 @@ body {
                     gap: 2rem;
                     align-items: center;
 
+                    @media (max-width: 45rem) {
+
+                        /* 720px */
+                        & {
+                            width: 100%;
+
+                            h1 {
+                                width: 100%;
+                            }
+
+                            form {
+                                width: 100%;
+                            }
+                        }
+                    }
+
                     h1 {
                         max-width: 766px;
                     }
 
                     form {
                         position: relative;
+                        max-width: 628px;
+                        width: 100%;
+
+                        input::placeholder {
+                            color: var(--82);
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 150%;
+
+                            @media (max-width: 27.5rem) {
+
+                                /* 440px */
+                                & {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
 
                         input {
                             display: flex;
-                            width: 628px;
+                            width: 100%;
                             padding: 12px 12px 12px 32px;
                             align-items: flex-start;
                             gap: 8px;
@@ -109,13 +160,7 @@ body {
                             height: 72px;
                             color: var(--92);
 
-                            ::placeholder {
-                                color: var(--82);
-                                font-size: 16px;
-                                font-weight: 600;
-                                line-height: 150%;
-                                /* 24px */
-                            }
+
                         }
 
                         button {
@@ -130,6 +175,7 @@ body {
                             gap: 8px;
                             border-radius: 24px;
                             background: #FFF;
+
                         }
                     }
                 }
@@ -141,6 +187,14 @@ body {
                 flex-direction: column;
                 align-items: center;
                 padding: 1.25rem 1.75rem;
+                margin-block-end: 140px;
+                @media (max-width: 64rem) {
+
+                    /* 1024px */
+                    & {
+                        padding: 1.25rem 1.2rem;
+                    }
+                }
 
                 .how-it-works {
                     margin-block: 128px;
@@ -149,30 +203,67 @@ body {
                     flex-direction: column;
                     align-items: center;
                     gap: 72px;
+                    width: 100%;
 
-                    &__header {}
 
                     &__content {
                         display: flex;
                         flex-direction: column;
                         gap: 72px;
+                        width: 100%;
+
+
+                        @media (max-width: 64rem) {
+
+                            /* 1024px */
+                            & {
+                                max-width: 640px;
+
+                                &--step {
+                                    flex-direction: column;
+                                }
+
+                                &--step:nth-child(2) {
+                                    flex-direction: column-reverse;
+                                }
+                            }
+                        }
 
                         &--step {
                             display: flex;
                             align-items: center;
                             gap: 3rem;
 
-                            img{
-                                max-width: 620px;
+                            @media (max-width: 64rem) {
+
+                                /* 1024px */
+                                & {
+                                    gap: 1rem;
+                                }
                             }
+
+                            img {
+                                max-width: 620px;
+
+                                @media (max-width: 64rem) {
+
+                                    /* 1024px */
+                                    & {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+
                             .step__content {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 0.5rem;
+
                                 &--header {
                                     display: flex;
                                     flex-direction: column;
                                     gap: 0.5rem;
+
                                     .tag {
                                         padding: 2px 12px;
                                         border-radius: 4px;
@@ -192,107 +283,176 @@ body {
                     }
                 }
 
-                .accordion {
-                    .accordion-item {
-                        border-bottom: 1px solid $lightgray;
+                section.faq {
+                    display: flex;
+                    gap: 2rem;
+                    justify-content: space-between;
+                    width: 100%;
+                    max-width: 1288px;
+
+                    @media (max-width: 64rem) {
+
+                        /* 1024px */
+                        & {
+                            width: 100%;
+                            max-width: 640px;
+                            flex-direction: column;
+                        }
+                    }
+
+                    h2 {
+                        padding-block-start: 2rem;
+                    }
+
+                    .accordion {
+                        width: 100%;
+                        max-width: 760px;
+                        display: flex;
+                        flex-direction: column;
+
+                        .divider {
+                            display: block;
+                            height: 1px;
+                            width: 100%;
+                            background-color: var(--48);
+                        }
+
+                        &-item {
+                            padding-block: 2rem;
+                        }
+
+                        button {
+                            position: relative;
+                            display: block;
+                            text-align: left;
+                            width: 100%;
+                            color: var(--82);
+                            padding-inline-end: 2.5rem;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: 150%;
+                            /* 36px */
+                            border: none;
+                            background: none;
+                            outline: none;
+
+                            &:hover,
+                            &:focus {
+                                cursor: pointer;
+                                color: var(--100);
+
+                                &::after {
+                                    cursor: pointer;
+                                    color: var(--100);
+                                    border: 1px solid var(--100);
+                                }
+                            }
+
+                            .icon {
+                                display: inline-block;
+                                position: absolute;
+                                top: 7px;
+                                right: 0;
+                                width: 24px;
+                                height: 24px;
+                                // border: 1px solid;
+                                // border-radius: 22px;
+
+                                &::before {
+                                    display: block;
+                                    position: absolute;
+                                    content: '';
+                                    top: 11px;
+                                    left: 3px;
+                                    width: 18px;
+                                    height: 2px;
+                                    background: currentColor;
+                                }
+
+                                &::after {
+                                    display: block;
+                                    position: absolute;
+                                    content: '';
+                                    top: 3px;
+                                    left: 11px;
+                                    width: 2px;
+                                    height: 18px;
+                                    background: currentColor;
+                                }
+                            }
+                        }
 
                         button[aria-expanded='true'] {
-                            border-bottom: 1px solid $blue;
-                        }
-                    }
+                            color: var(--100);
 
-                    button {
-                        position: relative;
-                        display: block;
-                        text-align: left;
-                        width: 100%;
-                        padding: 1em 0;
-                        color: $text;
-                        font-size: 1.15rem;
-                        font-weight: 400;
-                        border: none;
-                        background: none;
-                        outline: none;
+                            .icon {
+                                &::after {
+                                    width: 0;
+                                }
+                            }
 
-                        &:hover,
-                        &:focus {
-                            cursor: pointer;
-                            color: $blue;
-
-                            &::after {
-                                cursor: pointer;
-                                color: $blue;
-                                border: 1px solid $blue;
+                            +.accordion-content {
+                                opacity: 1;
+                                max-height: 9em;
+                                transition: all 200ms linear;
+                                will-change: opacity, max-height;
                             }
                         }
 
-                        .accordion-title {
-                            padding: 1em 1.5em 1em 0;
-                        }
-
-                        .icon {
-                            display: inline-block;
-                            position: absolute;
-                            top: 18px;
-                            right: 0;
-                            width: 22px;
-                            height: 22px;
-                            border: 1px solid;
-                            border-radius: 22px;
-
-                            &::before {
-                                display: block;
-                                position: absolute;
-                                content: '';
-                                top: 9px;
-                                left: 5px;
-                                width: 10px;
-                                height: 2px;
-                                background: currentColor;
-                            }
-
-                            &::after {
-                                display: block;
-                                position: absolute;
-                                content: '';
-                                top: 5px;
-                                left: 9px;
-                                width: 2px;
-                                height: 10px;
-                                background: currentColor;
-                            }
-                        }
-                    }
-
-                    button[aria-expanded='true'] {
-                        color: $blue;
-
-                        .icon {
-                            &::after {
-                                width: 0;
-                            }
-                        }
-
-                        +.accordion-content {
-                            opacity: 1;
-                            max-height: 9em;
-                            transition: all 200ms linear;
+                        .accordion-content {
+                            opacity: 0;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: opacity 200ms linear, max-height 200ms linear;
                             will-change: opacity, max-height;
+
+                            p {
+                                font-size: 1rem;
+                                font-weight: 300;
+                                margin-block-start: 12px;
+                            }
                         }
                     }
+                }
+            }
 
-                    .accordion-content {
-                        opacity: 0;
-                        max-height: 0;
-                        overflow: hidden;
-                        transition: opacity 200ms linear, max-height 200ms linear;
-                        will-change: opacity, max-height;
+            footer {
+                padding: 1.25rem 1.75rem;
 
-                        p {
-                            font-size: 1rem;
-                            font-weight: 300;
-                            margin: 2em 0;
-                        }
+                height: 100vh;
+                max-width: 1552px;
+                margin: 0 auto;
+                padding-block: 2rem;
+
+                // background-size: 50%;
+                // background: radial-gradient(2523px 2523px at bottom right, rgba(65, 130, 140, 0.20) 0%, rgba(13, 26, 28, 0.20) 100%);
+                img {
+                    width: 100%;
+                }
+
+                .divider {
+                    margin-block-start: 2.5rem;
+                    display: block;
+                    height: 1px;
+                    width: 100%;
+                    background-color: var(--48);
+                }
+
+                .version {
+                    padding-block: 24px;
+
+                    .header {
+                        margin-bottom: 0.75rem;
+                        color: var(--62);
+                        font-weight: 400;
+                        line-height: 100%;
+                    }
+
+                    .content {
+                        color: var(--92);
+                        font-weight: 500;
+                        line-height: 100%;
                     }
                 }
             }
