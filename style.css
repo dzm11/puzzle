@@ -53,6 +53,19 @@ h2 {
   font-weight: 600;
   line-height: 100%; /* 56px */
 }
+@media (max-width: 45rem) {
+  h2 {
+    /* 720px */
+  }
+  h2 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 32.5rem) {
+  h2 {
+    font-size: 36px;
+  }
+}
 
 h3 {
   color: #CED4D4;
@@ -61,6 +74,27 @@ h3 {
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 40px */
+}
+@media (max-width: 45rem) {
+  h3 {
+    /* 720px */
+  }
+  h3 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 32.5rem) {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 32.5rem) {
+  p {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 300;
+  }
 }
 
 :root {
@@ -219,15 +253,15 @@ picture {
 }
 
 :root {
-  --bg:hsla(188, 37%, 8%, 1);
-  --9:hsla(188, 7%, 9%, 1);
-  --18:hsla(188, 7%, 18%, 1);
-  --28:hsla(188, 7%, 28%, 1);
-  --48:hsla(188, 7%, 48%, 1);
-  --62:hsla(188, 7%, 62%, 1);
-  --82:hsla(188, 7%, 82%, 1);
-  --92:hsla(188, 7%, 92%, 1);
-  --100:hsla(0, 0%, 100%, 1);
+  --bg: hsla(188, 37%, 8%, 1);
+  --9: hsla(188, 7%, 9%, 1);
+  --18: hsla(188, 7%, 18%, 1);
+  --28: hsla(188, 7%, 28%, 1);
+  --48: hsla(188, 7%, 48%, 1);
+  --62: hsla(188, 7%, 62%, 1);
+  --82: hsla(188, 7%, 82%, 1);
+  --92: hsla(188, 7%, 92%, 1);
+  --100: hsla(0, 0%, 100%, 1);
 }
 
 .text-gradient {
@@ -235,6 +269,33 @@ picture {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--9);
+  color: #fff;
+  text-align: center;
+  padding: 6px 12px;
+  bottom: -30px;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  cursor: not-allowed;
+  cursor: -moz-not-allowed;
+  cursor: -webkit-not-allowed;
 }
 
 html.lenis,
@@ -276,6 +337,14 @@ body .wrapper .container .hero {
   align-items: center;
   gap: 27rem;
   padding: 1.25rem 1.75rem;
+}
+@media (max-width: 64rem) {
+  body .wrapper .container .hero {
+    /* 1024px */
+  }
+  body .wrapper .container .hero {
+    padding: 1.25rem 1.2rem;
+  }
 }
 body .wrapper .container .hero nav {
   max-width: 1552px;
@@ -324,7 +393,9 @@ body .wrapper .container .hero nav ul li button.disabled {
   align-items: center;
   gap: 8px;
   border-radius: 48px;
-  background: #929292;
+  background: rgba(146, 146, 146, 0.4);
+  -webkit-backdrop-filter: blur(18px);
+          backdrop-filter: blur(18px);
   color: var(--82);
 }
 body .wrapper .container .hero .waitlist-form {
@@ -375,10 +446,10 @@ body .wrapper .container .hero .waitlist-form form input::placeholder {
     /* 440px */
   }
   body .wrapper .container .hero .waitlist-form form input::-moz-placeholder {
-    font-size: 14px;
+    font-size: 15px;
   }
   body .wrapper .container .hero .waitlist-form form input::placeholder {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 body .wrapper .container .hero .waitlist-form form input {
@@ -395,6 +466,14 @@ body .wrapper .container .hero .waitlist-form form input {
   height: 72px;
   color: var(--92);
 }
+@media (max-width: 27.5rem) {
+  body .wrapper .container .hero .waitlist-form form input {
+    /* 440px */
+  }
+  body .wrapper .container .hero .waitlist-form form input {
+    padding: 8px 8px 8px 24px;
+  }
+}
 body .wrapper .container .hero .waitlist-form form button {
   position: absolute;
   right: 12px;
@@ -405,8 +484,22 @@ body .wrapper .container .hero .waitlist-form form button {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border-radius: 24px;
+  border-radius: 48px;
   background: #FFF;
+  color: var(--9);
+}
+@media (max-width: 27.5rem) {
+  body .wrapper .container .hero .waitlist-form form button {
+    /* 440px */
+  }
+  body .wrapper .container .hero .waitlist-form form button {
+    right: 8px;
+    top: 8px;
+    bottom: 8px;
+  }
+  body .wrapper .container .hero .waitlist-form form button .delete-on-mobile {
+    display: none;
+  }
 }
 body .wrapper .container main {
   display: flex;
@@ -431,6 +524,20 @@ body .wrapper .container main .how-it-works {
   align-items: center;
   gap: 72px;
   width: 100%;
+}
+@media (max-width: 64rem) {
+  body .wrapper .container main .how-it-works {
+    /* 1024px */
+  }
+  body .wrapper .container main .how-it-works {
+    margin-block-start: 72px;
+    margin-block-end: 100px;
+  }
+}
+@media (max-width: 32.5rem) {
+  body .wrapper .container main .how-it-works {
+    gap: 48px;
+  }
 }
 body .wrapper .container main .how-it-works__content {
   display: flex;
@@ -618,6 +725,14 @@ body .wrapper .container footer {
   max-width: 1552px;
   margin: 0 auto;
   padding-block: 2rem;
+}
+@media (max-width: 64rem) {
+  body .wrapper .container footer {
+    /* 1024px */
+  }
+  body .wrapper .container footer {
+    padding: 1.25rem 1.2rem;
+  }
 }
 body .wrapper .container footer img {
   width: 100%;

@@ -52,6 +52,18 @@ font-size: 56px;
 font-style: normal;
 font-weight: 600;
 line-height: 100%; /* 56px */
+@media (max-width: 45rem) {
+
+    /* 720px */
+    & {
+        font-size: 44px;
+    }
+}
+@media (max-width: 32.5rem) {
+    & {
+        font-size: 36px;
+    }
+}
 }
 
 h3{
@@ -61,4 +73,26 @@ font-size: 40px;
 font-style: normal;
 font-weight: 600;
 line-height: 100%; /* 40px */
+@media (max-width: 45rem) {
+
+    /* 720px */
+    & {
+        font-size: 38px;
+    }
+}
+@media (max-width: 32.5rem) {
+    & {
+        font-size: 32px;
+    }
+}
+}
+
+p{
+    @media (max-width: 32.5rem) {
+        & {
+            font-size: 14px;
+            line-height: 150%;
+            font-weight: 300;
+        }
+    }
 }

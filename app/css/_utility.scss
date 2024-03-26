@@ -1,17 +1,46 @@
-:root{
-    --bg:hsla(188, 37%, 8%, 1);
-    --9:hsla(188, 7%, 9%, 1);
-    --18:hsla(188, 7%, 18%, 1);
-    --28:hsla(188, 7%, 28%, 1);
-    --48:hsla(188, 7%, 48%, 1);
-    --62:hsla(188, 7%, 62%, 1);
-    --82:hsla(188, 7%, 82%, 1);
-    --92:hsla(188, 7%, 92%, 1);
-    --100:hsla(0, 0%, 100%, 1);
-    }
-.text-gradient{
+:root {
+    --bg: hsla(188, 37%, 8%, 1);
+    --9: hsla(188, 7%, 9%, 1);
+    --18: hsla(188, 7%, 18%, 1);
+    --28: hsla(188, 7%, 28%, 1);
+    --48: hsla(188, 7%, 48%, 1);
+    --62: hsla(188, 7%, 62%, 1);
+    --82: hsla(188, 7%, 82%, 1);
+    --92: hsla(188, 7%, 92%, 1);
+    --100: hsla(0, 0%, 100%, 1);
+}
+
+.text-gradient {
     background: linear-gradient(262deg, #7EB9A3 13.26%, #FEFAE8 64.05%, #F5EEBD 87.62%);
     background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: var(--9);
+    color: #fff;
+    text-align: center;
+    padding: 6px 12px;
+    bottom: -30px;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    cursor: not-allowed;
+    cursor: -moz-not-allowed;
+    cursor: -webkit-not-allowed;
 }
