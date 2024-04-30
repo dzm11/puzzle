@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: 'Nieprawidłowy format email' });
     return;
   }
-
+ 
   try {
     const { error } = await supabase
       .from('subscribers')  // Upewnij się, że tabela istnieje
