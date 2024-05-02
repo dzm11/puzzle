@@ -1,31 +1,23 @@
-// Wczytanie zmiennych środowiskowych z pliku .env
-require('dotenv').config();
-
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const subscribe = require('./subscribe'); // Endpoint do zapisywania emaili
-
+const subscribe = require('./subscribe'); // Import do endpointu
 
 const app = express();
-
-// Parsowanie danych JSON
 app.use(bodyParser.json());
 
-// Serwowanie plików statycznych z folderu public
+// Serwowanie plików statycznych
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Endpoint do zapisywania emaili
-app.use('/api/subscribe', subscribe);
+app.use('/api/subscribe', subscribe); // Obsługuje ścieżkę /api/subscribe
 
-// Ustawienie strony głównej
+// Serwowanie strony głównej
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html')); // Serwuje index.html jako stronę główną
+  res.sendFile(path.join(__dirname, '../index.html')); // Ścieżka do strony głównej
 });
 
-// Uruchomienie serwera na porcie 3000
-
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
