@@ -144,7 +144,7 @@ body {
                         input::placeholder {
                             color: var(--82);
                             font-size: 16px;
-                            font-weight: 600;
+                            font-weight: 500;
                             line-height: 150%;
 
                             @media (max-width: 27.5rem) {
@@ -208,6 +208,15 @@ body {
                                 }
                             }
 
+                        }
+                        .success-info{
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -40px;
+                            text-align: center;
+                            color: #05FFA3;
+                            font-weight: 500;
                         }
                     }
                 }
@@ -376,9 +385,9 @@ body {
                             width: 100%;
                             color: var(--82);
                             padding-inline-end: 2.5rem;
-                            font-size: 20px;
+                            font-size: 16px;
                             font-style: normal;
-                            font-weight: 800;
+                            font-weight: 500;
                             line-height: 150%;
                             /* 36px */
                             border: none;
@@ -400,8 +409,8 @@ body {
                             .icon {
                                 display: inline-block;
                                 position: absolute;
-                                top: 7px;
-                                right: 0;
+                                top: 0px;
+                                right: 8px;
                                 width: 24px;
                                 height: 24px;
                                 // border: 1px solid;
@@ -467,8 +476,6 @@ body {
 
             footer {
                 padding: 1.25rem 1.75rem;
-
-                height: 100vh;
                 max-width: 1552px;
                 margin: 0 auto;
                 padding-block: 2rem;

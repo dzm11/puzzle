@@ -505,10 +505,7 @@ body .wrapper .container .hero .waitlist-form form .success-info {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -40px;
-  text-align: center;
-  color: #05FFA3;
-  font-weight: 500;
+  bottom: -1rem;
 }
 body .wrapper .container main {
   display: flex;
@@ -765,4 +762,4 @@ body .wrapper .container footer .version .content {
   color: var(--92);
   font-weight: 500;
   line-height: 100%;
-}
+}/*# sourceMappingURL=style.css.map */

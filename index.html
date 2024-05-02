@@ -37,6 +37,7 @@
                         <button type="submit"><img src="./public/img/Plane.svg" alt="">
                             <p>Join<span class="delete-on-mobile"> waitlist</span></p>
                         </button>
+                        <div class="success-info" style="display: none;">Thank you! You have been added to the waiting list!</div>
                     </form>
                 </div>
             </section>
@@ -212,6 +213,7 @@
           event.preventDefault();
           
           const email = document.querySelector('input[name="email"]').value;
+          const successInfo = document.querySelector('.success-info');
     
           fetch('/api/subscribe', {
             method: 'POST',
@@ -222,7 +224,8 @@
           })
           .then(response => {
             if (response.ok) {
-              alert('Email zapisany!');
+                successInfo.style.display='block'
+            //   alert('Email zapisany!');
             } else {
               throw new Error('Coś poszło nie tak');
             }
