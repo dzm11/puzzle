@@ -32,6 +32,7 @@ router.post('/', async (req, res) => {
   } catch (error) {
     console.error('Błąd:', error); // Loguj inne błędy
     res.status(500).json({ message: 'Błąd podczas zapisywania emaila' });
+    
   }
 });
 
