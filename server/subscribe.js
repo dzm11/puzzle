@@ -1,5 +1,3 @@
-require('dotenv').config(); // Upewnij się, że zmienne środowiskowe są wczytane
-
 const express = require('express');
 const router = express.Router();
 
