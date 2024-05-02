@@ -1,7 +1,8 @@
+require('dotenv').config(); // Upewnij się, że zmienne środowiskowe są wczytane
+
 const express = require('express');
 const router = express.Router();
 
-require('dotenv').config(); // Upewnij się, że zmienne środowiskowe są wczytane
 const { createClient } = require('@supabase/supabase-js');
 
 // Zmienne środowiskowe
@@ -32,7 +33,7 @@ router.post('/', async (req, res) => {
   } catch (error) {
     console.error('Błąd:', error); // Loguj inne błędy
     res.status(500).json({ message: 'Błąd podczas zapisywania emaila' });
-    
+
   }
 });
 
