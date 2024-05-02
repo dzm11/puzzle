@@ -160,8 +160,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 a {
@@ -227,9 +226,9 @@ ul li p {
 .prevent-select {
   -webkit-user-select: none;
   /* Safari */
+  -ms-user-select: none;
   /* IE 10 and IE 11 */
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   /* Standard syntax */
 }
 
@@ -242,9 +241,9 @@ ul li p {
   cursor: not-allowed;
   -webkit-user-select: none;
   /* Safari */
+  -ms-user-select: none;
   /* IE 10 and IE 11 */
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   /* Standard syntax */
 }
 
@@ -394,8 +393,7 @@ body .wrapper .container .hero nav ul li button.disabled {
   gap: 8px;
   border-radius: 48px;
   background: rgba(146, 146, 146, 0.4);
-  -webkit-backdrop-filter: blur(18px);
-          backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   color: var(--82);
 }
 body .wrapper .container .hero .waitlist-form {
@@ -426,12 +424,6 @@ body .wrapper .container .hero .waitlist-form form {
   max-width: 628px;
   width: 100%;
 }
-body .wrapper .container .hero .waitlist-form form input::-moz-placeholder {
-  color: var(--82);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 150%;
-}
 body .wrapper .container .hero .waitlist-form form input::placeholder {
   color: var(--82);
   font-size: 16px;
@@ -439,14 +431,8 @@ body .wrapper .container .hero .waitlist-form form input::placeholder {
   line-height: 150%;
 }
 @media (max-width: 27.5rem) {
-  body .wrapper .container .hero .waitlist-form form input::-moz-placeholder {
-    /* 440px */
-  }
   body .wrapper .container .hero .waitlist-form form input::placeholder {
     /* 440px */
-  }
-  body .wrapper .container .hero .waitlist-form form input::-moz-placeholder {
-    font-size: 15px;
   }
   body .wrapper .container .hero .waitlist-form form input::placeholder {
     font-size: 15px;
@@ -461,8 +447,7 @@ body .wrapper .container .hero .waitlist-form form input {
   border-radius: 48px;
   border: 1px solid var(--48);
   background: rgba(255, 255, 255, 0.15);
-  -webkit-backdrop-filter: blur(14px);
-          backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   height: 72px;
   color: var(--92);
 }
@@ -606,7 +591,6 @@ body .wrapper .container main .how-it-works__content--step .step__content--heade
   padding: 2px 12px;
   border-radius: 4px;
   background: #FFF;
-  width: -moz-max-content;
   width: max-content;
   color: var(--9);
   font-size: 14px;

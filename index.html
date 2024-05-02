@@ -225,6 +225,7 @@
           .then(response => {
             if (response.ok) {
                 successInfo.style.display='block'
+                document.getElementById("email-form").reset();
             //   alert('Email zapisany!');
             } else {
               throw new Error('Coś poszło nie tak');
