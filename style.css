@@ -1,6 +1,6 @@
 @font-face {
   font-family: "ClashDisplay-Semibold";
-  src: url("./app/fonts/ClashDisplay-Semibold.woff2") format("woff2"), url("./app/fonts/ClashDisplay-Semibold.woff") format("woff");
+  src: url("/public/fonts/ClashDisplay-Semibold.woff2") format("woff2"), url("/public/fonts/ClashDisplay-Semibold.woff") format("woff");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -323,7 +323,7 @@ body {
   font-family: var(--ff-secondary);
   color: var(--82);
   background-color: var(--bg);
-  background-image: url(/public/img/Hero-background.jpg);
+  background-image: url(/img/Hero-background.jpg);
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -505,7 +505,10 @@ body .wrapper .container .hero .waitlist-form form .success-info {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1rem;
+  bottom: -40px;
+  text-align: center;
+  color: #05FFA3;
+  font-weight: 500;
 }
 body .wrapper .container main {
   display: flex;
@@ -762,4 +765,4 @@ body .wrapper .container footer .version .content {
   color: var(--92);
   font-weight: 500;
   line-height: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
