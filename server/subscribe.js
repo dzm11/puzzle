@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const { createClient } = require('@supabase/supabase-js');
+// const dotenv = require('dotenv');
+// dotenv.config(); // Wczytuje zmienne środowiskowe
 
 // Zmienne środowiskowe
 const supabaseUrl = process.env.SUPABASE_URL; // Sprawdź, czy wartość jest poprawna

@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const subscribe = require('./subscribe'); // Import do endpointu
 
+
 const app = express();
 app.use(bodyParser.json());
 
