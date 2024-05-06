@@ -69,8 +69,8 @@
                         <button type="submit"><img src="./img/Plane.svg" alt="">
                             <p>Join<span class="delete-on-mobile"> waitlist</span></p>
                         </button>
-                        <div class="success-info" style="display: none;">Thank you! You have been added to the waiting
-                            list!</div>
+                        <div class="success-info" style="display: none;"></div>
+                        <div class="error-info" style="display: none;"></div>
                     </form>
                 </div>
             </section>
@@ -249,33 +249,55 @@
 
         items.forEach(item => item.addEventListener('click', toggleAccordion));
     </script>
-    <script>
-        document.getElementById('email-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const email = document.querySelector('input[name="email"]').value;
-            const successInfo = document.querySelector('.success-info');
-
-            fetch('/api/subscribe', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email })
-            })
-                .then(response => {
-                    if (response.ok) {
-                        successInfo.style.display = 'block'
-                        document.getElementById("email-form").reset();
-                        //   alert('Email zapisany!');
-                    } else {
-                        throw new Error('Coś poszło nie tak');
-                    }
-                })
-                .catch(error => {
-                    alert('Błąd: ' + error.message);
-                });
-        });
+    <script>document.getElementById('email-form').addEventListener('submit', function (event) {
+        event.preventDefault();  // Zapobiega domyślnemu wysłaniu formularza
+      
+        const email = document.querySelector('input[name="email"]').value;
+      
+        // Upewnij się, że elementy DOM istnieją
+        const successInfo = document.querySelector('.success-info');  // Komunikat sukcesu
+        const errorInfo = document.querySelector('.error-info');  // Komunikat błędu
+      
+        // Wyrażenie regularne do sprawdzania poprawności adresu e-mail
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+        // Sprawdź, czy adres e-mail jest poprawny
+        if (!emailRegex.test(email)) {
+          if (errorInfo) {  // Upewnij się, że element istnieje
+            errorInfo.style.display = 'block';
+            errorInfo.innerText = 'Invalid email format. Please enter a valid email address.';
+          }
+          return;  // Nie kontynuuj, jeśli format jest niepoprawny
+        }
+      
+        fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              if (successInfo) {  // Sprawdź, czy element istnieje
+                successInfo.style.display = 'block';
+                successInfo.innerText = 'Thank you! You have been added to the waiting list!';
+              }
+              document.getElementById('email-form').reset();  // Resetuj formularz po pomyślnym zapisie
+            } else if (response.status === 409) {  // Jeśli e-mail już istnieje w bazie danych
+              if (errorInfo) {  // Sprawdź, czy element istnieje
+                errorInfo.style.display = 'block';
+                errorInfo.innerText = 'This email address already exists in our database.';
+              }
+            } else {
+              throw new Error('Something went wrong');  // Dla innych błędów
+            }
+          })
+          .catch((error) => {
+            alert('Error: ' + error.message);  // Obsługa błędów w przypadku innych problemów
+          });
+      });
+      
     </script>
 </body>
 
